@@ -1,4 +1,0 @@
-/* extras.css - barra de progresso e botao voltar ao topo */
-#xt-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,#FF2E88,#FF7A45,#FFB020);box-shadow:0 0 12px rgba(255,46,136,.8)}
-#xt-top{position:fixed;right:22px;bottom:82px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,120,190,.5);background:rgba(26,11,30,.92);color:#FFB020;font-size:1.1rem;font-weight:800;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
-#xt-top.show{opacity:1;pointer-events:auto;transform:none}
