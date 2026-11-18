@@ -1,0 +1,24 @@
+/* extras.css - progresso, voltar ao topo, menu de linguas, RTL e fontes */
+#xt-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,#FF2E88,#FF7A45,#FFB020);box-shadow:0 0 12px rgba(255,46,136,.8)}
+#xt-top{position:fixed;right:22px;bottom:82px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,120,190,.5);background:rgba(26,11,30,.92);color:#FFB020;font-size:1.1rem;font-weight:800;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+#xt-top.show{opacity:1;pointer-events:auto;transform:none}
+
+/* MENU PRINCIPAL (topo) + SELETOR DE LINGUA */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:18px;padding-bottom:0}
+.brand{font:800 1.15rem 'Bricolage Grotesque',system-ui,sans-serif;color:var(--amber)}
+.lang{display:inline-flex;align-items:center;gap:8px;font-size:1.1rem}
+.lang select{appearance:none;-webkit-appearance:none;cursor:pointer;font:700 .92rem 'DM Sans',system-ui,sans-serif;color:var(--text);
+  background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;padding:9px 14px;min-width:120px}
+.lang select:hover{border-color:rgba(255,46,136,.7)}
+.lang select option{background:var(--plum);color:var(--text)}
+
+/* ARABE: direita para a esquerda */
+[dir="rtl"] .fab{right:auto;left:16px}
+[dir="rtl"] #xt-top{right:auto;left:22px}
+[dir="rtl"] .price{right:auto;left:12px}
+[dir="rtl"] .avatar::after{right:auto;left:4px}
+
+/* FONTES POR LINGUA (letter-spacing quebra as letras ligadas do arabe) */
+html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic','Segoe UI',Tahoma,Arial,sans-serif!important;letter-spacing:0!important}
+html[lang="zh"] body,html[lang="zh"] body *{font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC','Noto Sans CJK SC',system-ui,sans-serif!important;letter-spacing:0!important}
+html[lang="ja"] body,html[lang="ja"] body *{font-family:'Hiragino Sans','Yu Gothic','Meiryo','Noto Sans JP','Noto Sans CJK JP',system-ui,sans-serif!important;letter-spacing:0!important}
